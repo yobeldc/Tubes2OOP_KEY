@@ -22,9 +22,9 @@ public class UpdateMemberPage extends VBox {
     public UpdateMemberPage() {
         VBox finalBox = new VBox();
         finalBox.getStyleClass().addAll("page3");
-        finalBox.setPrefSize(1000, 800);
-        finalBox.setMaxWidth(1000);
-        finalBox.setMaxHeight(800);
+        finalBox.setPrefSize(800, 700);
+        finalBox.setMaxWidth(800);
+        finalBox.setMaxHeight(700);
         finalBox.setAlignment(Pos.CENTER);
 
         VBox UpdateMemberPage = new VBox();
@@ -35,16 +35,16 @@ public class UpdateMemberPage extends VBox {
         // Create a new box
         VBox searchBox = new VBox();
         searchBox.getStyleClass().addAll("box");
-        searchBox.setPrefSize(900, 50);
-        searchBox.setMaxWidth(900);
+        searchBox.setPrefSize(600, 50);
+        searchBox.setMaxWidth(600);
         searchBox.setMaxHeight(50);
         VBox.setMargin(searchBox, new Insets(0, 0, 10, 0));
         
         HBox search = new HBox();
         search.setAlignment(Pos.CENTER_LEFT);
         search.getStyleClass().addAll("box");
-        search.setPrefSize(471, 47);
-        search.setMaxWidth(471);
+        search.setPrefSize(400, 47);
+        search.setMaxWidth(400);
         search.setMaxHeight(47);
 
         // Create the icon
@@ -60,13 +60,13 @@ public class UpdateMemberPage extends VBox {
         // Create the text field
         TextField memberField = new TextField();
         memberField.setPromptText("Cari Nama Member");
-        memberField.setPrefSize(280, 30);
-        memberField.setMaxWidth(280);
+        memberField.setPrefSize(290, 30);
+        memberField.setMaxWidth(290);
         memberField.setMaxHeight(30);
         
         // Add the icon and text field to the HBox
         search.getChildren().addAll(searchBtn, memberField);
-        HBox.setMargin(searchBtn, new Insets(0, 0, 0, 75));
+        HBox.setMargin(searchBtn, new Insets(0, 0, 0, 40));
         
         searchBox.getChildren().addAll(search);
         searchBox.setAlignment(Pos.CENTER);
