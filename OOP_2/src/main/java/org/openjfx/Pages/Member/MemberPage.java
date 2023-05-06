@@ -1,4 +1,4 @@
-package org.openjfx.Member;
+package org.openjfx.Pages.Member;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

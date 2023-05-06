@@ -1,6 +1,4 @@
-package org.openjfx.Home;
-
-import org.openjfx.Home.HomePage;
+package org.openjfx.Pages.Home;
 import org.openjfx.App;
 
 public class HomePageController {

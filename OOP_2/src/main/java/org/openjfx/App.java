@@ -7,7 +7,9 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import org.openjfx.Home.HomePageController;
+
+import org.openjfx.Pages.Home.*;
+import org.openjfx.Bar.*;
 
 
 public class App extends Application {

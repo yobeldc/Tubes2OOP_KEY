@@ -1,4 +1,4 @@
-package org.openjfx;
+package org.openjfx.Bar;
 
 import javafx.application.Platform;
 import javafx.geometry.Bounds;
@@ -15,10 +15,12 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-import org.openjfx.Home.HomePageController;
-import org.openjfx.Member.MemberPageController;
-import org.openjfx.Page1.Page1Controller;
-import org.openjfx.UpdateMember.UpdateMemberPageController;
+import org.openjfx.Pages.Home.*;
+import org.openjfx.Pages.UpdateMember.*;
+import org.openjfx.Pages.InventoriPage.*;
+import org.openjfx.Pages.Member.*;
+
+
 
 public class Sidebar extends HBox {
     public Sidebar() {
@@ -37,6 +39,7 @@ public class Sidebar extends HBox {
         MenuItem penjualanItem = new MenuItem("Penjualan");
 
         MenuItem inventoriItem = new MenuItem("Inventori");
+        inventoriItem.setOnAction(e -> InventoriPageController.showInventoriPage());
 
         MenuItem laporanItem = new MenuItem("Laporan");
 

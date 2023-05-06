@@ -1,7 +1,7 @@
-package org.openjfx.Page1;
+package org.openjfx.Pages.Page1;
 
 import org.openjfx.App;
-import org.openjfx.Page1.Page1;
+
 
 public class Page1Controller {
     
