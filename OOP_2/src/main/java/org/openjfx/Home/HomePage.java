@@ -23,7 +23,6 @@ public class HomePage extends HBox {
         title.setPrefSize(439, 242);
         title.setMaxWidth(439);
         title.setMaxHeight(242);
-        title.setAlignment(Pos.CENTER);
         
         Label titleLabel = new Label("BILLIFY");
         titleLabel.setFont(new Font(50));
@@ -34,12 +33,12 @@ public class HomePage extends HBox {
         VBox.setMargin(quote, new Insets(20, 0, 0, 0));
         title.getChildren().add(quote);
         
+        title.setAlignment(Pos.CENTER);
         leftSide.getChildren().addAll(title);
-        leftSide.setAlignment(Pos.CENTER);
+        leftSide.setAlignment(Pos.BOTTOM_CENTER);
         
         // GROUP DATA
         VBox group = new VBox();
-        VBox.setMargin(group, new Insets(100, 0, 0, 0));
         group.setPrefSize(439, 242);
         group.setMaxWidth(439);
         group.setMaxHeight(242);
