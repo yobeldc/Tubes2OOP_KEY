@@ -13,20 +13,20 @@ import org.openjfx.Home.HomePageController;
 public class App extends Application {
 
     private static BorderPane root;
-    private static MenuBar menuBar;
 
     @Override
     public void start(Stage primaryStage) {
         // create root layout
         root = new BorderPane();
+        root.setStyle("-fx-background-color: #206EB4;");
 
         // Create the header
-        Header header = new Header();
-        root.setTop(header);
-
+        // Header header = new Header();
+        // root.setTop(header);
+        
         // create menu bar
-        menuBar = new MenuBar();
-        root.setLeft(menuBar);
+        Sidebar sideBar = new Sidebar();
+        root.setTop(sideBar);
 
         // show initial homepage
         HomePageController.showHomePage();
@@ -38,9 +38,6 @@ public class App extends Application {
         primaryStage.setTitle("My App");
         primaryStage.setScene(scene);
         primaryStage.show();
-
-        // set alignment of menuBar to bottom left
-        menuBar.setAlignment(Pos.BOTTOM_LEFT);
     }
 
     public static BorderPane getRoot() {

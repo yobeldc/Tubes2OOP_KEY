@@ -27,3 +27,12 @@
 .white {
     -fx-background-color: #FFFFFF;
 }
+
+.hamburger {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.hamburger:hover {
+    -fx-background-color: #7CBAF2;
+}
