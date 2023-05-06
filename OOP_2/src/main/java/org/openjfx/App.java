@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.geometry.Pos;
@@ -80,25 +81,131 @@ public class App extends Application {
     }
 
     private void showHomePage() {
+        // Left side of the page (title and group name)
         VBox leftSide = new VBox();
-        leftSide.getStyleClass().addAll("box");
+        leftSide.getStyleClass().addAll("page");
         leftSide.setPrefWidth(659);
         leftSide.setMaxWidth(659);
         
+        // TITLE
+        VBox title = new VBox();
+        title.getStyleClass().addAll("box");
+        title.setPrefSize(439, 242);
+        title.setMaxWidth(439);
+        title.setMaxHeight(242);
+        title.setAlignment(Pos.CENTER);
+
+        Label titleLabel = new Label("BILLIFY");
+        titleLabel.setFont(new Font(50));
+        title.getChildren().add(titleLabel);
+
+        Label quote = new Label("Make Your Life Easy");
+        quote.setFont(new Font(30));
+        VBox.setMargin(quote, new Insets(20, 0, 0, 0));
+        title.getChildren().add(quote);
+
+        leftSide.getChildren().addAll(title);
+        leftSide.setAlignment(Pos.CENTER);
+
+        // GROUP DATA
+        VBox group = new VBox();
+        VBox.setMargin(group, new Insets(100, 0, 0, 0));
+        group.setPrefSize(439, 242);
+        group.setMaxWidth(439);
+        group.setMaxHeight(242);
+        
+        HBox createdBy = new HBox();
+        createdBy.setPrefSize(659, 40);
+        createdBy.setMaxWidth(659);
+        createdBy.setMaxHeight(40);
+        
+        Label created = new Label("created by");
+        created.setFont(new Font(13));
+        
+        // Create a new box
+        VBox chumbucket = new VBox();
+        HBox.setMargin(chumbucket, new Insets(0, 0, 0, 10));
+        chumbucket.getStyleClass().addAll("box");
+        chumbucket.setPrefSize(279, 39);
+        chumbucket.setMaxWidth(279);
+        chumbucket.setMaxHeight(39);
+        
+        // Add label as a title
+        Label groupName = new Label("ChumBucket");
+        chumbucket.getChildren().add(groupName);
+        chumbucket.setAlignment(Pos.CENTER);
+        
+        createdBy.getChildren().addAll(created, chumbucket);
+        createdBy.setAlignment(Pos.CENTER_LEFT);
+        
+        group.getChildren().add(createdBy);
+        
+        // Nama anggota kelompok
+        Label yobel = new Label("13521067 - YOBEL DEAN CHRISTOPHER");
+        yobel.setFont(new Font(13));
+        group.getChildren().add(yobel);
+        VBox.setMargin(yobel, new Insets(15, 0, 0, 0));
+        
+        Label hobert = new Label("13521079 - HOBERT ANTHONY JONATHAN");
+        hobert.setFont(new Font(13));
+        group.getChildren().add(hobert);
+        VBox.setMargin(hobert, new Insets(15, 0, 0, 0));
+        
+        Label jerry = new Label("13521131 - JEREMYA DHARMAWAN RAHARJO");
+        jerry.setFont(new Font(13));
+        group.getChildren().add(jerry);
+        VBox.setMargin(jerry, new Insets(15, 0, 0, 0));
+        
+        Label ferin = new Label("13521161 - FERINDYA AULIA BERLIANTI");
+        ferin.setFont(new Font(13));
+        group.getChildren().add(ferin);
+        VBox.setMargin(ferin, new Insets(15, 0, 0, 0));
+        
+        Label iwan = new Label("13521164 - AKHMAD SETIAWAN");
+        iwan.setFont(new Font(13));
+        group.getChildren().add(iwan);
+        VBox.setMargin(iwan, new Insets(15, 0, 0, 0));
+        
+        group.setAlignment(Pos.BOTTOM_LEFT);
+        
+        leftSide.getChildren().addAll(group);
+        leftSide.setAlignment(Pos.CENTER);
+
+        // Right side of the page (date and time)
         VBox rightSide = new VBox();
-        rightSide.getStyleClass().addAll("page");
+        rightSide.getStyleClass().addAll("page2");
         rightSide.setPrefWidth(853);
         rightSide.setMaxWidth(853);
-    
+        
+        VBox timeDate = new VBox();
+        timeDate.getStyleClass().addAll("box");
+        timeDate.setPrefSize(439, 242);
+        timeDate.setMaxWidth(439);
+        timeDate.setMaxHeight(242);
+        timeDate.setAlignment(Pos.CENTER);
+        
+        Label dateLabel = new Label("Tanggal dateLabel");
+        dateLabel.setFont(new Font(25));
+        timeDate.getChildren().add(dateLabel);
+
+        Label timeLabel = new Label("Jam timeLabel");
+        timeLabel.setFont(new Font(42));
+        VBox.setMargin(timeLabel, new Insets(20, 0, 0, 0));
+        timeDate.getChildren().add(timeLabel);
+        
+        VBox.setMargin(timeDate, new Insets(30, 0, 0, 0));
+        rightSide.getChildren().addAll(timeDate);
+        rightSide.setAlignment(Pos.TOP_CENTER);
+        
         HBox homePage = new HBox();
         homePage.setSpacing(5);
         homePage.getStyleClass().addAll("page");
-        homePage.getChildren().add(leftSide);
-        homePage.getChildren().add(rightSide);
-    
+        homePage.getChildren().addAll(leftSide);
+        homePage.getChildren().addAll(rightSide);
+        
         root.setCenter(homePage);
     }
-
+    
     private void showPage1() {
         Label page1Label = new Label("This is page 1!");
         VBox page1Pane = new VBox(page1Label);
@@ -171,7 +278,7 @@ public class App extends Application {
         daftar.setMaxHeight(335);
         VBox.setMargin(daftar, new Insets(50, 0, 0, 0));
 
-        // Add the new box as a child of the homePane VBox
+        // Add the new box as a child of the memberPage VBox
         memberPage.getChildren().add(textBox);
         memberPage.setAlignment(Pos.CENTER);
     }

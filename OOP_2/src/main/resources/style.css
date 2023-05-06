@@ -12,7 +12,11 @@
     -fx-background-color: #DAF3FF;
 }
 
+.page2 {
+    -fx-background-color: #428FD4;
+}
+
 .box {
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: #206EB4;
     
 }
