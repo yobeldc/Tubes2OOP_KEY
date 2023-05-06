@@ -1,3 +1,4 @@
+/* 
 package org.openjfx;
 
 import javafx.application.Application;
@@ -181,4 +182,131 @@ public class App extends Application {
         launch();
     }
 
+}
+
+*/
+
+/* 
+package org.openjfx;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+import org.openjfx.Member.MemberPage;
+import org.openjfx.Home.HomePage;
+import org.openjfx.Page1.Page1;
+import javafx.geometry.Pos;
+import javafx.scene.control.Button;
+
+
+public class App extends Application {
+
+    private static BorderPane root;
+    private static MenuBar menuBar;
+
+    @Override
+    public void start(Stage primaryStage) {
+        // create root layout
+        root = new BorderPane();
+
+        Button memberButton = new Button("Pendaftaran Member");
+        memberButton.setOnAction(e -> showMemberPage());
+
+        // Create the header
+        Header header = new Header();
+        root.setTop(header);
+
+        // create menu bar
+        menuBar = new MenuBar(memberButton);
+        root.setLeft(menuBar);
+
+        showHomePage();
+
+        // create scene
+        Scene scene = new Scene(root, 800, 600);
+        scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
+
+        primaryStage.setTitle("My App");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        // set alignment of menuBar to bottom left
+        menuBar.setAlignment(Pos.BOTTOM_LEFT);
+    }
+
+    public static void showHomePage() {
+        root.setCenter(new HomePage());
+    }
+
+    public static void showPage1() {
+        root.setCenter(new Page1());
+    }
+
+    private void showMemberPage() {
+        root.setCenter(new MemberPage());
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+}
+*/
+
+package org.openjfx;
+
+import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import org.openjfx.Home.HomePageController;
+import org.openjfx.Member.MemberPageController;
+import org.openjfx.Page1.Page1Controller;
+
+public class App extends Application {
+
+    private static BorderPane root;
+    private static MenuBar menuBar;
+
+    @Override
+    public void start(Stage primaryStage) {
+        // create root layout
+        root = new BorderPane();
+
+        
+
+        // Create the header
+        Header header = new Header();
+        root.setTop(header);
+
+        // create menu bar
+        menuBar = new MenuBar();
+        root.setLeft(menuBar);
+
+        HomePageController.showHomePage();
+
+        // create scene
+        Scene scene = new Scene(root, 800, 600);
+        scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
+
+        primaryStage.setTitle("My App");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        // set alignment of menuBar to bottom left
+        menuBar.setAlignment(Pos.BOTTOM_LEFT);
+    }
+
+    public static BorderPane getRoot() {
+        return root;
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
 }
