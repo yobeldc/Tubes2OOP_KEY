@@ -16,7 +16,14 @@
     -fx-background-color: #428FD4;
 }
 
+.page3 {
+    -fx-background-color: #7CBAF2;
+}
+
 .box {
     -fx-background-color: #206EB4;
-    
+}
+
+.white {
+    -fx-background-color: #FFFFFF;
 }
