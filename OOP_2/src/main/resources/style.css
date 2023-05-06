@@ -1,0 +1,9 @@
+.bottom-left-button {
+    -fx-position: absolute;
+    -fx-start-margin: 100px;
+    -fx-background-color: #2196F3;
+    -fx-text-fill: #FFF;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-alignment: bottom-left;
+}
