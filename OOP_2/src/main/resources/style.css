@@ -7,3 +7,12 @@
     -fx-font-weight: bold;
     -fx-alignment: bottom-left;
 }
+
+.page {
+    -fx-background-color: #DAF3FF;
+}
+
+.box {
+    -fx-background-color: #FFFFFF;
+    
+}
