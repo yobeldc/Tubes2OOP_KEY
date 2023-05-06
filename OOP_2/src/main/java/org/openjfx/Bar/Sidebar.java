@@ -15,6 +15,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import org.openjfx.Pages.HistoriTransaksi.*;
 import org.openjfx.Pages.Home.*;
 import org.openjfx.Pages.Inventori.*;
 import org.openjfx.Pages.Laporan.LaporanPageController;
@@ -52,6 +53,7 @@ public class Sidebar extends HBox {
         pendaftaranItem.setOnAction(e -> MemberPageController.showMemberPage());
 
         MenuItem historiItem = new MenuItem("Histori Transaksi");
+        historiItem.setOnAction(e -> HistoriTransaksiController.showHistoriTransaksiPage());
 
         MenuItem pengaturanItem = new MenuItem("Pengaturan");
 
