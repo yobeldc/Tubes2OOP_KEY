@@ -16,8 +16,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import org.openjfx.Pages.Home.*;
+import org.openjfx.Pages.Inventori.*;
+import org.openjfx.Pages.Laporan.LaporanPageController;
 import org.openjfx.Pages.UpdateMember.*;
-import org.openjfx.Pages.InventoriPage.*;
 import org.openjfx.Pages.Member.*;
 
 
@@ -42,6 +43,7 @@ public class Sidebar extends HBox {
         inventoriItem.setOnAction(e -> InventoriPageController.showInventoriPage());
 
         MenuItem laporanItem = new MenuItem("Laporan");
+        laporanItem.setOnAction(e -> LaporanPageController.showLaporanPage());
 
         MenuItem updateMemItem = new MenuItem("Update Member / VIP");
         updateMemItem.setOnAction(e -> UpdateMemberPageController.showUpdateMemberPage());

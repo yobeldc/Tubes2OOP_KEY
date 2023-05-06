@@ -1,4 +1,4 @@
-package org.openjfx.Pages.InventoriPage;
+package org.openjfx.Pages.Inventori;
 
 import org.openjfx.App;
 

@@ -1,4 +1,4 @@
-package org.openjfx.Pages.InventoriPage;
+package org.openjfx.Pages.Inventori;
 
 import javafx.geometry.*;
 import javafx.scene.control.*;

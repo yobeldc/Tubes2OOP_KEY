@@ -41,3 +41,7 @@
 .hamburger:hover {
     -fx-background-color: #7CBAF2;
 }
+
+.content-box{
+    -fx-background-color:white;
+}

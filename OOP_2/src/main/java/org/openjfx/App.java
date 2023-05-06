@@ -39,6 +39,7 @@ public class App extends Application {
 
         primaryStage.setTitle("My App");
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
