@@ -13,6 +13,9 @@ import javafx.stage.Stage;
 
 import org.openjfx.Pages.Home.*;
 import org.openjfx.Bar.*;
+import org.openjfx.Data.*;
+import org.openjfx.Structs.Barang.*;
+import org.openjfx.Data.JsonParser.*;
 
 
 public class App extends Application {
@@ -51,6 +54,9 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        // Data data = new Data("test.json");
+        JsonParser json = new JsonParser("data/test.json");
+    
         launch();
     }
 }
