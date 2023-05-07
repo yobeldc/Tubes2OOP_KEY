@@ -1,7 +1,6 @@
 package org.openjfx.Pages.Member;
 
 import org.openjfx.App;
-import org.openjfx.Pages.Member.MemberPage;
 
 public class MemberPageController {
     
