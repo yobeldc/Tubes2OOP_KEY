@@ -1,10 +1,10 @@
-// package org.openjfx.Pages.Setting;
+package org.openjfx.Pages.Setting;
 
-// import org.openjfx.App;
+import org.openjfx.App;
 
-// public class SettingPageController {
+public class SettingPageController {
     
-//     public static void showSettingPage() {
-//         App.getRoot().setCenter(new SettingPage());
-//     }
-// }
+    public static void showSettingPage() {
+        App.getRoot().setCenter(new SettingPage());
+    }
+}

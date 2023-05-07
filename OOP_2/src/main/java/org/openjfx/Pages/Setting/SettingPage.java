@@ -1,399 +1,239 @@
-// package org.openjfx.Pages.Setting;
+package org.openjfx.Pages.Setting;
 
-// import javafx.application.Application;
-// import javafx.geometry.*;
-// import javafx.scene.*;
-// import javafx.scene.control.*;
-// import javafx.scene.layout.*;
-// import javafx.scene.text.*;
-// import javafx.scene.paint.*; 
-// import javafx.scene.shape.*;
-// import javafx.stage.*;
-// import javafx.util.*;
+import java.io.File;
 
-// public class SettingPage extends VBox {
+import javafx.application.Application;
+import javafx.geometry.*;
+import javafx.scene.*;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.scene.text.*;
+import javafx.scene.paint.*; 
+import javafx.scene.shape.*;
+import javafx.stage.*;
+import javafx.util.*;
 
-//     public SettingPage() {
-//         VBox finalBox = new VBox();
-//         finalBox.getStyleClass().addAll("page 8");
-//         finalBox.setPrefSize(800, 700);
-//         finalBox.setMaxWidth(800);
-//         finalBox.setMaxHeight(700);
-//         finalBox.setAlignment(Pos.CENTER);
+public class SettingPage extends HBox {
 
-//         VBox SettingPage = new VBox();
-//         SettingPage.setPadding(new Insets(10));
-//         SettingPage.setSpacing(5);
-//         SettingPage.getStyleClass().addAll("page");
+    public SettingPage() {
+        HBox finalBox = new HBox();
+        finalBox.getStyleClass().addAll("page");
+        
+        VBox plugin = new VBox();
+        plugin.setPadding(new Insets(20, 20, 20, 20));
+        plugin.setAlignment(Pos.TOP_CENTER);
+        
+        VBox pluginTitle = new VBox();
+        pluginTitle.setPrefSize(250, 50);
+        pluginTitle.setMaxWidth(250);
+        pluginTitle.setMaxHeight(50);
+    
+        // Add label as a title
+        Label pluginSetting = new Label("Plugin Settings");
+        pluginTitle.setAlignment(Pos.CENTER);
+        pluginTitle.getChildren().addAll(pluginSetting);
+        
+        Button addPlugin = new Button("add plugin");
+        VBox.setMargin(addPlugin, new Insets(10, 0, 0, 0));
+        
+        HBox chart1 = new HBox();
+        VBox.setMargin(chart1, new Insets(10, 0, 0, 0));
+        Label c1 = new Label("Chart 1");
+        HBox.setMargin(c1, new Insets(0, 150, 0, 0));
+        
+        ToggleButton togglec1 = new ToggleButton("Off");
+        togglec1.setPrefSize(40, 40);
+        
+        // handle the toggle button action to switch between "on" and "off" states
+        togglec1.setOnAction(e -> {
+            if (togglec1.isSelected()) {
+                togglec1.setText("On");
+                // TODO
+            } else {
+                togglec1.setText("Off");
+                // TODO
+            }
+        });
+        
+        chart1.setAlignment(Pos.CENTER_RIGHT);
+        chart1.getChildren().addAll(c1, togglec1);
+        
+        HBox chart2 = new HBox();
+        VBox.setMargin(chart2, new Insets(10, 0, 0, 0));
+        Label c2 = new Label("Chart 2");
+        HBox.setMargin(c2, new Insets(0, 150, 0, 0));
+        
+        ToggleButton togglec2 = new ToggleButton("Off");
+        togglec2.setPrefSize(40, 40);
+        
+        // handle the toggle button action to switch between "on" and "off" states
+        togglec2.setOnAction(e -> {
+            if (togglec2.isSelected()) {
+                togglec2.setText("On");
+                // TODO
+            } else {
+                togglec2.setText("Off");
+                // TODO
+            }
+        });
+        
+        chart2.setAlignment(Pos.CENTER_RIGHT);
+        chart2.getChildren().addAll(c2, togglec2);
+        
+        HBox system1 = new HBox();
+        VBox.setMargin(system1, new Insets(10, 0, 0, 0));
+        Label s1 = new Label("System 1");
+        HBox.setMargin(s1, new Insets(0, 150, 0, 0));
+        
+        ToggleButton toggles1 = new ToggleButton("Off");
+        toggles1.setPrefSize(40, 40);
+        
+        // handle the toggle button action to switch between "on" and "off" states
+        toggles1.setOnAction(e -> {
+            if (toggles1.isSelected()) {
+                toggles1.setText("On");
+                // TODO
+            } else {
+                toggles1.setText("Off");
+                // TODO
+            }
+        });
+        
+        system1.setAlignment(Pos.CENTER_RIGHT);
+        system1.getChildren().addAll(s1, toggles1);
+        
+        HBox system2 = new HBox();
+        VBox.setMargin(system2, new Insets(10, 0, 0, 0));
+        Label s2 = new Label("System 1");
+        HBox.setMargin(s2, new Insets(0, 150, 0, 0));
+        
+        ToggleButton toggles2 = new ToggleButton("Off");
+        toggles2.setPrefSize(40, 40);
+        
+        // handle the toggle button action to switch between "on" and "off" states
+        toggles2.setOnAction(e -> {
+            if (toggles2.isSelected()) {
+                toggles2.setText("On");
+                // TODO
+            } else {
+                toggles2.setText("Off");
+                // TODO
+            }
+        });
+        
+        system2.setAlignment(Pos.CENTER_RIGHT);
+        system2.getChildren().addAll(s2, toggles2);
+        
+        plugin.getChildren().addAll(pluginTitle);
+        plugin.getChildren().addAll(addPlugin);
+        plugin.getChildren().addAll(chart1);
+        plugin.getChildren().addAll(chart2);
+        plugin.getChildren().addAll(system1);
+        plugin.getChildren().addAll(system2);
+        VBox.setMargin(plugin, new Insets(0, 0, 20, 0));
 
-//         // Create a new box
-//         VBox inputBox = new VBox();
-//         inputBox.getStyleClass().addAll("box");
-//         inputBox.setPrefSize(300, 200);
-//         inputBox.setMaxWidth(300);
-//         inputBox.setMaxHeight(200);
+        // FILE CONFIG
+        VBox file = new VBox();
+        VBox.setMargin(file, new Insets(20, 0, 0, 0));
+        file.setPadding(new Insets(20, 20, 20, 20));
+        file.setAlignment(Pos.TOP_CENTER);
+
+        VBox fileConfig = new VBox();
+        Label fc = new Label("File Configuration");
+        fileConfig.setAlignment(Pos.CENTER);
+        fileConfig.getChildren().addAll(fc);
+
+        TextField textField = new TextField();
+        textField.setPromptText("Enter your folder path");
+
+        Button openButton = new Button("Open File");
+        openButton.setOnAction(e -> {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Open Resource File");
+            File selectedFile = fileChooser.showOpenDialog(openButton.getScene().getWindow());
+            if (selectedFile != null) {
+                textField.setText(selectedFile.getAbsolutePath());
+            }
+        });
+
+        HBox hbox = new HBox(textField, openButton);
+        hbox.setSpacing(10);
+        hbox.setPadding(new Insets(10));
+
+        Button cd = new Button("Change Directory");
+        Button cf = new Button("Change Format");
+        
+        HBox submit = new HBox(cd, cf);
+        submit.setSpacing(20);
+        submit.setPadding(new Insets(10));
+
+        HBox.setHgrow(textField, javafx.scene.layout.Priority.ALWAYS);
 
         
-//         // Add label as a title
-//         Label pluginSetting = new Label("Plugin Settings");
-//         VBox.setMargin(pluginSetting, new Insets(50, 0, 0, 0));
-//         inputBox.setAlignment(Pos.TOP_LEFT);
-
-//         // Add button "add plugin"
-//         Button addPlugin = new Button("Add Plugin...");
-
-
-//         // Add name macam" plugin
-//         Text chart1 = new Text("Chart 1");
-
-//         // Add button switch on/off
-//         Pane root = new Pane();
-//         root.setPrefSize(300, 300);
-
-//         ToggleSwitch toggle = new ToggleSwitch();
-//         toggle.setTranslateX(100);
-//         toggle.setTranslateY(100);
-
-//         Text text = new Text();
-//         text.setFont(Font.font(18));
-//         text.setFill(Color.WHITE);
-//         text.setTranslateX(100);
-//         text.setTranslateY(200);
-//         text.textProperty().bind(Bindings.when(toggle.switchedOnProperty()).then("ON").otherwise("OFF"));
-
-//         root.getChildren().addAll(toggle, text);
-//         return root;
-
-//         BooleanProperty switchedOn = new SimpleBooleanProperty(false);
-//         TranslateTransition translateAnimation = new TranslateTransition(Duration.seconds(0.25), toggle);
-//         FillTransition fillAnimation = new FillTransition(Duration.seconds(0.25));
-//         ParallelTransition animation = new ParallelTransition(translateAnimation, fillAnimation);
+        // MONEY CONFIG
+        VBox money = new VBox();
+        VBox.setMargin(money, new Insets(20, 0, 0, 0));
+        money.setPadding(new Insets(20, 20, 20, 20));
+        money.setAlignment(Pos.TOP_CENTER);  
         
-//         BooleanProperty switchedOnProperty() {
-//             return switchedOn;
-//         }
-
-//         ToggleSwitch() {
-//             getStyleClass().add("toggle-switch");
-//             Rectangle background = new Rectangle(100, 50);
-//             background.setArcWidth(50);
-//             background.setArcHeight(50);
-//             background.setStroke(Color.LIGHTGRAY);
-
-//             Circle trigger = new Circle(25);
-//             trigger.setCenterX(25);
-//             trigger.setCenterY(25);
-//             trigger.setFill(Color.WHITE);
-//             trigger.setStroke(Color.LIGHTGRAY);
-
-//             translateAnimation.setNode(trigger);
-//             fillAnimation.setShape(background);
-
-//             getChildren().addAll(background, trigger);
-
-//             switchedOn.addListener((obs, oldState, newState) -> {
-//                 boolean isOn = newState.booleanValue();
-//                 translateAnimation.setToX(isOn ? 100 - 50 : 0);
-//                 fillAnimation.setFromValue(isOn ? Color.WHITE : Color.LIGHTGREEN);
-//                 fillAnimation.setToValue(isOn ? Color.LIGHTGREEN : Color.WHITE);
-
-//                 animation.play();
-//             });
-
-//             setOnMouseClicked(event -> {
-//                 switchedOn.set(!switchedOn.get());
-//             });
-//         }
-
-//         // Add name macam" plugin
-//         Text chart2 = new Text("Chart 2");
-
-//         // Add button switch on/off
-//         Pane root = new Pane();
-//         root.setPrefSize(300, 300);
-
-//         ToggleSwitch toggle = new ToggleSwitch();
-//         toggle.setTranslateX(100);
-//         toggle.setTranslateY(100);
-
-//         Text text = new Text();
-//         text.setFont(Font.font(18));
-//         text.setFill(Color.WHITE);
-//         text.setTranslateX(100);
-//         text.setTranslateY(200);
-//         text.textProperty().bind(Bindings.when(toggle.switchedOnProperty()).then("ON").otherwise("OFF"));
-
-//         root.getChildren().addAll(toggle, text);
-//         return root;
-
-//         BooleanProperty switchedOn = new SimpleBooleanProperty(false);
-//         TranslateTransition translateAnimation = new TranslateTransition(Duration.seconds(0.25), toggle);
-//         FillTransition fillAnimation = new FillTransition(Duration.seconds(0.25));
-//         ParallelTransition animation = new ParallelTransition(translateAnimation, fillAnimation);
+        VBox kursTitle = new VBox();
+        Label mc = new Label("Money Configuration");
+        kursTitle.setAlignment(Pos.CENTER);
+        kursTitle.getChildren().addAll(mc);
         
-//         BooleanProperty switchedOnProperty() {
-//             return switchedOn;
-//         }
-
-//         ToggleSwitch() {
-//             getStyleClass().add("toggle-switch");
-//             Rectangle background = new Rectangle(100, 50);
-//             background.setArcWidth(50);
-//             background.setArcHeight(50);
-//             background.setStroke(Color.LIGHTGRAY);
-
-//             Circle trigger = new Circle(25);
-//             trigger.setCenterX(25);
-//             trigger.setCenterY(25);
-//             trigger.setFill(Color.WHITE);
-//             trigger.setStroke(Color.LIGHTGRAY);
-
-//             translateAnimation.setNode(trigger);
-//             fillAnimation.setShape(background);
-
-//             getChildren().addAll(background, trigger);
-
-//             switchedOn.addListener((obs, oldState, newState) -> {
-//                 boolean isOn = newState.booleanValue();
-//                 translateAnimation.setToX(isOn ? 100 - 50 : 0);
-//                 fillAnimation.setFromValue(isOn ? Color.WHITE : Color.LIGHTGREEN);
-//                 fillAnimation.setToValue(isOn ? Color.LIGHTGREEN : Color.WHITE);
-
-//                 animation.play();
-//             });
-
-//             setOnMouseClicked(event -> {
-//                 switchedOn.set(!switchedOn.get());
-//             });
-//         }
-
-//         // Add name macam" plugin
-//         Text System1 = new Text("System 1");
-
-//         // Add button switch on/off
-//         Pane root = new Pane();
-//         root.setPrefSize(300, 300);
-
-//         ToggleSwitch toggle = new ToggleSwitch();
-//         toggle.setTranslateX(100);
-//         toggle.setTranslateY(100);
-
-//         Text text = new Text();
-//         text.setFont(Font.font(18));
-//         text.setFill(Color.WHITE);
-//         text.setTranslateX(100);
-//         text.setTranslateY(200);
-//         text.textProperty().bind(Bindings.when(toggle.switchedOnProperty()).then("ON").otherwise("OFF"));
-
-//         root.getChildren().addAll(toggle, text);
-//         return root;
-
-//         BooleanProperty switchedOn = new SimpleBooleanProperty(false);
-//         TranslateTransition translateAnimation = new TranslateTransition(Duration.seconds(0.25), toggle);
-//         FillTransition fillAnimation = new FillTransition(Duration.seconds(0.25));
-//         ParallelTransition animation = new ParallelTransition(translateAnimation, fillAnimation);
+        ComboBox<String> options = new ComboBox<>();
+        options.getItems().addAll("IDR", "US", "SGD");
+        // options.setPromptText("IDR");
+        // options.setPromptText("Select currency");
+        options.setValue("IDR");
+        options.setEditable(false);
+        options.setPrefSize(260, 30);
+        options.setMaxWidth(260);
+        options.setMaxHeight(30);
+        VBox.setMargin(options, new Insets(50, 0, 0, 0));
         
-//         BooleanProperty switchedOnProperty() {
-//             return switchedOn;
-//         }
-
-//         ToggleSwitch() {
-//             getStyleClass().add("toggle-switch");
-//             Rectangle background = new Rectangle(100, 50);
-//             background.setArcWidth(50);
-//             background.setArcHeight(50);
-//             background.setStroke(Color.LIGHTGRAY);
-
-//             Circle trigger = new Circle(25);
-//             trigger.setCenterX(25);
-//             trigger.setCenterY(25);
-//             trigger.setFill(Color.WHITE);
-//             trigger.setStroke(Color.LIGHTGRAY);
-
-//             translateAnimation.setNode(trigger);
-//             fillAnimation.setShape(background);
-
-//             getChildren().addAll(background, trigger);
-
-//             switchedOn.addListener((obs, oldState, newState) -> {
-//                 boolean isOn = newState.booleanValue();
-//                 translateAnimation.setToX(isOn ? 100 - 50 : 0);
-//                 fillAnimation.setFromValue(isOn ? Color.WHITE : Color.LIGHTGREEN);
-//                 fillAnimation.setToValue(isOn ? Color.LIGHTGREEN : Color.WHITE);
-
-//                 animation.play();
-//             });
-
-//             setOnMouseClicked(event -> {
-//                 switchedOn.set(!switchedOn.get());
-//             });
-//         }
-
-//         // Add name macam" plugin
-//         Text System2 = new Text("System 2");
-
-//         // Add button switch on/off
-//         Pane root = new Pane();
-//         root.setPrefSize(300, 300);
-
-//         ToggleSwitch toggle = new ToggleSwitch();
-//         toggle.setTranslateX(100);
-//         toggle.setTranslateY(100);
-
-//         Text text = new Text();
-//         text.setFont(Font.font(18));
-//         text.setFill(Color.WHITE);
-//         text.setTranslateX(100);
-//         text.setTranslateY(200);
-//         text.textProperty().bind(Bindings.when(toggle.switchedOnProperty()).then("ON").otherwise("OFF"));
-
-//         root.getChildren().addAll(toggle, text);
-//         return root;
-
-//         BooleanProperty switchedOn = new SimpleBooleanProperty(false);
-//         TranslateTransition translateAnimation = new TranslateTransition(Duration.seconds(0.25), toggle);
-//         FillTransition fillAnimation = new FillTransition(Duration.seconds(0.25));
-//         ParallelTransition animation = new ParallelTransition(translateAnimation, fillAnimation);
         
-//         BooleanProperty switchedOnProperty() {
-//             return switchedOn;
-//         }
-
-//         ToggleSwitch() {
-//             getStyleClass().add("toggle-switch");
-//             Rectangle background = new Rectangle(100, 50);
-//             background.setArcWidth(50);
-//             background.setArcHeight(50);
-//             background.setStroke(Color.LIGHTGRAY);
-
-//             Circle trigger = new Circle(25);
-//             trigger.setCenterX(25);
-//             trigger.setCenterY(25);
-//             trigger.setFill(Color.WHITE);
-//             trigger.setStroke(Color.LIGHTGRAY);
-
-//             translateAnimation.setNode(trigger);
-//             fillAnimation.setShape(background);
-
-//             getChildren().addAll(background, trigger);
-
-//             switchedOn.addListener((obs, oldState, newState) -> {
-//                 boolean isOn = newState.booleanValue();
-//                 translateAnimation.setToX(isOn ? 100 - 50 : 0);
-//                 fillAnimation.setFromValue(isOn ? Color.WHITE : Color.LIGHTGREEN);
-//                 fillAnimation.setToValue(isOn ? Color.LIGHTGREEN : Color.WHITE);
-
-//                 animation.play();
-//             });
-
-//             setOnMouseClicked(event -> {
-//                 switchedOn.set(!switchedOn.get());
-//             });
-//         }
-
-//         // Add label as a title
-//         Label moneyLabel = new Label("Money Configuration");
-//         VBox.setMargin(moneyLabel, new Insets(50, 0, 0, 0));
-//         inputBox.setAlignment(Pos.TOP_CENTER);
-
-//         // Add option field for ubah status member
-//         // Create a combo box for updating member status
-//         ComboBox<String> moneyConfig = new ComboBox<>();
-//         moneyConfig.getItems().addAll("IDR", "US", "SGD");
-//         moneyConfig.setPromptText("IDR");
-//         moneyConfig.setEditable(false);
-//         moneyConfig.setPrefSize(335, 45);
-//         moneyConfig.setMaxWidth(335);
-//         moneyConfig.setMaxHeight(335);
-//         VBox.setMargin(moneyConfig, new Insets(50, 0, 0, 0));
-
-//         // Set layout properties for the combo box
-//         moneyConfig.setLayoutX(200);
-//         moneyConfig.setLayoutY(200);
-
-//         // Add label as a title
-//         Label fileConfig = new Label("File Configuration");
-//         VBox.setMargin(fileConfig, new Insets(50, 0, 0, 0));
-//         inputBox.setAlignment(Pos.TOP_CENTER);
-
-//         // Add text field for File Configuration
-//         TextField fileField = new TextField();
-//         fileField.setPromptText("input file name...");
-//         fileField.setPrefSize(335, 45);
-//         fileField.setMaxWidth(335);
-//         fileField.setMaxHeight(335);
-//         VBox.setMargin(fileField, new Insets(50, 0, 0, 0));
+        // TAX SERVICE
+        VBox tns = new VBox();
+        VBox.setMargin(tns, new Insets(20, 0, 0, 0));
+        tns.setPadding(new Insets(20, 20, 20, 20));
+        tns.setAlignment(Pos.TOP_CENTER);
         
-//         // Add Change Directory Button
-//         Button change = new Button("Change Directory");
-
-//         // Add Change Format Button
-//         Button changeFormat = new Button("Change Format");
-
-//         // Add label as a title
-//         Label taxService = new Label("Tax & Service");
-//         VBox.setMargin(taxService, new Insets(50, 0, 0, 0));
-//         inputBox.setAlignment(Pos.TOP_CENTER);
-
-//         // Add text field for Tax & Servide
-//         TextField taxField = new TextField();
-//         taxField.setPromptText("input amount (in %)...");
-//         taxField.setPrefSize(335, 45);
-//         taxField.setMaxWidth(335);
-//         taxField.setMaxHeight(335);
-//         VBox.setMargin(taxField, new Insets(50, 0, 0, 0));
-
+        VBox tnsTitle = new VBox();
+        Label ts = new Label("Tax & Service");
+        tnsTitle.setAlignment(Pos.CENTER);
+        tnsTitle.getChildren().addAll(ts);
         
-//         // Add text field for Tax & Servide
-//         TextField serviceField = new TextField();
-//         serviceField.setPromptText("input amount (in %)...");
-//         serviceField.setPrefSize(335, 45);
-//         serviceField.setMaxWidth(335);
-//         serviceField.setMaxHeight(335);
-//         VBox.setMargin(serviceField, new Insets(50, 0, 0, 0));
+        Label taxLabel = new Label("Tax");
+        HBox.setMargin(taxLabel, new Insets(0, 26, 0, 0));
+        TextField taxField = new TextField();
+        taxField.setPromptText("input amount in %");
         
-//         // Add Change Directory Button
-//         Button applyTax = new Button("Apply");
-
-//         // Add Change Format Button
-//         Button applyService = new Button("Apply");
-
-//         inputBox.getChildren().add(pluginSetting);
-//         inputBox.getChildren().add(addPlugin);
-//         inputBox.getChildren().add(chart1);
-//         inputBox.getChildren().add(chart2);
-//         inputBox.getChildren().add(System1);
-//         inputBox.getChildren().add(System2);
-//         inputBox.getChildren().add(moneyLabel);
-//         inputBox.getChildren().add(moneyConfig);
-//         inputBox.getChildren().add(fileConfig);
-//         inputBox.getChildren().add(fileField);
-//         inputBox.getChildren().add(change);
-//         inputBox.getChildren().add(changeFormat);
-//         inputBox.getChildren().add(taxService);
-//         inputBox.getChildren().add(taxField);
-//         inputBox.getChildren().add(serviceField);
-//         inputBox.getChildren().add(applyTax);
-//         inputBox.getChildren().add(applyService);
-
-//         applyTax.setPrefSize(335, 45);
-//         applyTax.setMaxWidth(335);
-//         applyTax.setMaxHeight(335);
-//         VBox.setMargin(applyTax, new Insets(50, 0, 0, 0));
-
-//         applyService.setPrefSize(335, 45);
-//         applyService.setMaxWidth(335);
-//         applyService.setMaxHeight(335);
-//         VBox.setMargin(applyService, new Insets(50, 0, 0, 0));
-
-//         addPlugin.setPrefSize(335, 45);
-//         addPlugin.setMaxWidth(335);
-//         addPlugin.setMaxHeight(335);
-//         VBox.setMargin(addPlugin, new Insets(50, 0, 0, 0));
-
-//         change.setPrefSize(335, 45);
-//         change.setMaxWidth(335);
-//         change.setMaxHeight(335);
-//         VBox.setMargin(change, new Insets(50, 0, 0, 0));
-//     }
-// }
+        Button addTax = new Button("Apply");
+        
+        HBox tax = new HBox();
+        tax.setSpacing(10);
+        tax.setPadding(new Insets(10));
+        tax.getChildren().addAll(taxLabel, taxField, addTax);
+        
+        Label serviceLabel = new Label("Service");
+        TextField serviceField = new TextField();
+        serviceField.setPromptText("input amount in %");
+        
+        Button addService = new Button("Apply");
+        
+        HBox service = new HBox();
+        service.setSpacing(10);
+        service.setPadding(new Insets(10));
+        service.getChildren().addAll(serviceLabel, serviceField, addService);
+        
+        file.getChildren().addAll(fileConfig, hbox, submit);
+        tns.getChildren().addAll(tnsTitle, tax, service);
+        money.getChildren().addAll(kursTitle, options);
+        
+        finalBox.getChildren().addAll(plugin, file, money, tns);
+        finalBox.setAlignment(Pos.CENTER);
+        
+        getChildren().addAll(finalBox);
+    }
+}

@@ -22,6 +22,7 @@ import org.openjfx.Pages.Laporan.LaporanPageController;
 import org.openjfx.Pages.UpdateMember.*;
 import org.openjfx.Pages.Member.*;
 import org.openjfx.Pages.Sales.*;
+import org.openjfx.Pages.Setting.*;
 
 
 
@@ -56,8 +57,9 @@ public class Sidebar extends HBox {
 
         MenuItem historiItem = new MenuItem("Histori Transaksi");
         historiItem.setOnAction(e -> HistoriTransaksiController.showHistoriTransaksiPage());
-
+        
         MenuItem pengaturanItem = new MenuItem("Pengaturan");
+        pengaturanItem.setOnAction(e -> SettingPageController.showSettingPage());
 
         MenuItem pluginItem = new MenuItem("Plugin Statistik");
         
