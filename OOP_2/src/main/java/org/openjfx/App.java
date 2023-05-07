@@ -10,12 +10,9 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-<<<<<<< HEAD
-=======
 
 import org.openjfx.Pages.Home.*;
 import org.openjfx.Bar.*;
->>>>>>> 2f946721b84edd4dda0d944084926a0446d6c811
 
 
 public class App extends Application {

@@ -15,22 +15,15 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-<<<<<<< HEAD:OOP_2/src/main/java/org/openjfx/Bar/Sidebar.java
-import org.openjfx.Pages.Home.HomePageController;
-import org.openjfx.Pages.Member.MemberPageController;
-import org.openjfx.Pages.Page1.Page1Controller;
-import org.openjfx.Pages.Sales.SalesPageController;
-import org.openjfx.Pages.UpdateMember.UpdateMemberPageController;
-=======
 import org.openjfx.Pages.HistoriTransaksi.*;
 import org.openjfx.Pages.Home.*;
 import org.openjfx.Pages.Inventori.*;
 import org.openjfx.Pages.Laporan.LaporanPageController;
 import org.openjfx.Pages.UpdateMember.*;
 import org.openjfx.Pages.Member.*;
+import org.openjfx.Pages.Sales.*;
 
 
->>>>>>> 2f946721b84edd4dda0d944084926a0446d6c811:OOP_2/src/main/java/org/openjfx/Sidebar.java
 
 public class Sidebar extends HBox {
     public Sidebar() {
