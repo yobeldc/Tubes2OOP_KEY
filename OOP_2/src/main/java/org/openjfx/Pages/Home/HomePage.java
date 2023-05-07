@@ -1,5 +1,11 @@
 package org.openjfx.Pages.Home;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.TextStyle;
+import java.util.Locale;
+
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -11,7 +17,6 @@ import javafx.scene.text.FontWeight;
 public class HomePage extends HBox {
 
     public HomePage() {
-        
         // Left side of the page (title and group name)
         VBox leftSide = new VBox();
         leftSide.getStyleClass().addAll("page");
@@ -123,18 +128,37 @@ public class HomePage extends HBox {
         timeDate.setMaxWidth(439);
         timeDate.setMaxHeight(242);
         timeDate.setAlignment(Pos.CENTER);
-        
-        Label dateLabel = new Label("Tanggal dateLabel");
+
+        Label dateLabel = new Label();
         dateLabel.setFont(Font.font("Arial", 38));
         dateLabel.setTextFill(Color.WHITE);
         timeDate.getChildren().add(dateLabel);
         
-        Label timeLabel = new Label("Jam timeLabel");
+        Label timeLabel = new Label();
         timeLabel.setFont(Font.font("Arial", FontWeight.BOLD, 48));
         timeLabel.setTextFill(Color.WHITE);
         VBox.setMargin(timeLabel, new Insets(20, 0, 0, 0));
         timeDate.getChildren().add(timeLabel);
         
+        // Threading to showing realtime date and time
+        new Thread(() -> {
+            while (true) {
+                LocalDateTime now = LocalDateTime.now();
+                String day = now.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.getDefault());
+                String date = now.toLocalDate().toString();
+                String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+                Platform.runLater(() -> dateLabel.setText(day + ": " + date));
+                Platform.runLater(() -> timeLabel.setText(time));
+    
+                // Wait for 1 second before getting the new date and time
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
         VBox.setMargin(timeDate, new Insets(30, 0, 0, 0));
         rightSide.getChildren().addAll(timeDate);
         rightSide.setAlignment(Pos.TOP_CENTER);
