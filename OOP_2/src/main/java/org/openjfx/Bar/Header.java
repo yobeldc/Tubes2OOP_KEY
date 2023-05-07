@@ -1,4 +1,4 @@
-package org.openjfx;
+package org.openjfx.Bar;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuBar;

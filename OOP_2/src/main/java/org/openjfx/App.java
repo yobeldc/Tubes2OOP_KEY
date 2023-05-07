@@ -1,5 +1,8 @@
 package org.openjfx;
 
+import org.openjfx.Bar.Sidebar;
+import org.openjfx.Pages.Home.HomePageController;
+
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
@@ -7,7 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import org.openjfx.Home.HomePageController;
 
 
 public class App extends Application {

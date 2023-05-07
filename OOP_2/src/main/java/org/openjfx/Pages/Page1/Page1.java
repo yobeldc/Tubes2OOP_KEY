@@ -1,4 +1,4 @@
-package org.openjfx.Page1;
+package org.openjfx.Pages.Page1;
 
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;

@@ -1,4 +1,4 @@
-package org.openjfx.UpdateMember;
+package org.openjfx.Pages.UpdateMember;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;

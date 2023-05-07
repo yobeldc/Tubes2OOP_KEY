@@ -36,3 +36,15 @@
 .hamburger:hover {
     -fx-background-color: #7CBAF2;
 }
+
+.boxButton {
+    -fx-background-color: #206EB4;
+    -fx-background-insets: 0;
+    -fx-text-fill: #FFF;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.boxButton:hover {
+    -fx-background-color: #7CBAF2;
+}

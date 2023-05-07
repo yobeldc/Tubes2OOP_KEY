@@ -1,7 +1,7 @@
-package org.openjfx.UpdateMember;
+package org.openjfx.Pages.UpdateMember;
 
 import org.openjfx.App;
-import org.openjfx.UpdateMember.UpdateMemberPage;
+import org.openjfx.Pages.UpdateMember.UpdateMemberPage;
 
 public class UpdateMemberPageController {
     
