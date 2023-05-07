@@ -4,7 +4,9 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 
 public class HomePage extends HBox {
 
@@ -24,11 +26,13 @@ public class HomePage extends HBox {
         title.setMaxHeight(242);
         
         Label titleLabel = new Label("BILLIFY");
-        titleLabel.setFont(new Font(50));
+        titleLabel.setFont(Font.font("Arial", FontWeight.BOLD, 50));
+        titleLabel.setTextFill(Color.WHITE);
         title.getChildren().add(titleLabel);
         
         Label quote = new Label("Make Your Life Easy");
-        quote.setFont(new Font(30));
+        quote.setFont(Font.font("Arial", 30));
+        quote.setTextFill(Color.WHITE);
         VBox.setMargin(quote, new Insets(20, 0, 0, 0));
         title.getChildren().add(quote);
         
@@ -48,7 +52,8 @@ public class HomePage extends HBox {
         createdBy.setMaxHeight(40);
         
         Label created = new Label("created by");
-        created.setFont(new Font(13));
+        created.setFont(Font.font("Arial", 12));
+        created.setTextFill(Color.BLACK);
         
         // Create a new box
         VBox chumbucket = new VBox();
@@ -60,6 +65,8 @@ public class HomePage extends HBox {
         
         // Add label as a title
         Label groupName = new Label("ChumBucket");
+        groupName.setFont(Font.font("Arial", FontWeight.BOLD, 17));
+        groupName.setTextFill(Color.WHITE);
         chumbucket.getChildren().add(groupName);
         chumbucket.setAlignment(Pos.CENTER);
         
@@ -70,27 +77,32 @@ public class HomePage extends HBox {
         
         // Nama anggota kelompok
         Label yobel = new Label("13521067 - YOBEL DEAN CHRISTOPHER");
-        yobel.setFont(new Font(13));
+        yobel.setFont(Font.font("Arial", 14));
+        yobel.setTextFill(Color.BLACK);
         group.getChildren().add(yobel);
         VBox.setMargin(yobel, new Insets(15, 0, 0, 0));
         
         Label hobert = new Label("13521079 - HOBERT ANTHONY JONATHAN");
-        hobert.setFont(new Font(13));
+        hobert.setFont(Font.font("Arial", 14));
+        hobert.setTextFill(Color.BLACK);
         group.getChildren().add(hobert);
         VBox.setMargin(hobert, new Insets(15, 0, 0, 0));
         
         Label jerry = new Label("13521131 - JEREMYA DHARMAWAN RAHARJO");
-        jerry.setFont(new Font(13));
+        jerry.setFont(Font.font("Arial", 14));
+        jerry.setTextFill(Color.BLACK);
         group.getChildren().add(jerry);
         VBox.setMargin(jerry, new Insets(15, 0, 0, 0));
         
         Label ferin = new Label("13521161 - FERINDYA AULIA BERLIANTI");
-        ferin.setFont(new Font(13));
+        ferin.setFont(Font.font("Arial", 14));
+        ferin.setTextFill(Color.BLACK);
         group.getChildren().add(ferin);
         VBox.setMargin(ferin, new Insets(15, 0, 0, 0));
         
         Label iwan = new Label("13521164 - AKHMAD SETIAWAN");
-        iwan.setFont(new Font(13));
+        iwan.setFont(Font.font("Arial", 14));
+        iwan.setTextFill(Color.BLACK);
         group.getChildren().add(iwan);
         VBox.setMargin(iwan, new Insets(15, 0, 0, 0));
         
@@ -113,11 +125,13 @@ public class HomePage extends HBox {
         timeDate.setAlignment(Pos.CENTER);
         
         Label dateLabel = new Label("Tanggal dateLabel");
-        dateLabel.setFont(new Font(25));
+        dateLabel.setFont(Font.font("Arial", 38));
+        dateLabel.setTextFill(Color.WHITE);
         timeDate.getChildren().add(dateLabel);
-
+        
         Label timeLabel = new Label("Jam timeLabel");
-        timeLabel.setFont(new Font(42));
+        timeLabel.setFont(Font.font("Arial", FontWeight.BOLD, 48));
+        timeLabel.setTextFill(Color.WHITE);
         VBox.setMargin(timeLabel, new Insets(20, 0, 0, 0));
         timeDate.getChildren().add(timeLabel);
         
