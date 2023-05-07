@@ -40,7 +40,7 @@ public class App extends Application {
         HomePageController.showHomePage();
 
         // create scene      
-        Scene scene = new Scene(root, 1300, 650);
+        Scene scene = new Scene(root, 1300, 750);
         scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
 
         primaryStage.setTitle("My App");

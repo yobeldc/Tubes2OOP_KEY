@@ -55,3 +55,18 @@
 .boxButton:hover {
     -fx-background-color: #7CBAF2;
 }
+
+.settingsTitle {
+    -fx-background-color: #428FD4;
+    -fx-background-radius: 10;
+    -fx-font-family: Dialog;
+    -fx-font-size: 23;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.settingsContainer {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 0);
+}
