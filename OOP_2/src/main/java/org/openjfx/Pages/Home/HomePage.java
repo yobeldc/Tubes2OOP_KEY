@@ -144,10 +144,9 @@ public class HomePage extends HBox {
         new Thread(() -> {
             while (true) {
                 LocalDateTime now = LocalDateTime.now();
-                String day = now.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.getDefault());
-                String date = now.toLocalDate().toString();
+                String date = now.format(DateTimeFormatter.ofPattern("EEEE, d MMMM uuuu"));
                 String time = now.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
-                Platform.runLater(() -> dateLabel.setText(day + ": " + date));
+                Platform.runLater(() -> dateLabel.setText(date));
                 Platform.runLater(() -> timeLabel.setText(time));
     
                 // Wait for 1 second before getting the new date and time
