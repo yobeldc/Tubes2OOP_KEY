@@ -15,7 +15,7 @@ public class HistoriTransaksi extends HBox {
     public HistoriTransaksi() {
         
         // Create a label for the dropdown
-        Label dropdownLabel = new Label("Choose Bill:");
+        Label dropdownLabel = new Label("Choose Customer's ID:");
 
         // Create a list of options for the dropdown
         ObservableList<String> options = FXCollections.observableArrayList(
@@ -92,16 +92,12 @@ public class HistoriTransaksi extends HBox {
         buttonBox.setMaxWidth(1000);
     
 
-        // Create the Bayar button
-        Button bayarButton = new Button("Bayar");
-        VBox.setMargin(bayarButton, new Insets(0, 0, 0, 0));
-
         // Create the Print button
         Button printButton = new Button("Print");
         VBox.setMargin(printButton, new Insets(0, 0, 10, 900));
 
         // Add the buttons to the buttonBox
-        buttonBox.getChildren().addAll(bayarButton, printButton);
+        buttonBox.getChildren().addAll(printButton);
         buttonBox.setAlignment(Pos.CENTER);
 
         // Add the content box to the right side VBox
