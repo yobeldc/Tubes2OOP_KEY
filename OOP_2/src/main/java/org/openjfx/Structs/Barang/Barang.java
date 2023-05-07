@@ -56,6 +56,14 @@ public class Barang {
     public void setGambar(String gambar) {
         this.gambar = gambar;
     }
+
+    public void debug() {
+        System.out.println("Nama: " + nama);
+        System.out.println("Kategori: " + kategori);
+        harga.debug();
+        System.out.println("Stok: " + stok);
+        System.out.println("Gambar: " + gambar);
+    }
 }
 
 

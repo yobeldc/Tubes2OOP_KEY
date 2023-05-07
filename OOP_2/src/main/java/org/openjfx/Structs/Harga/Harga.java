@@ -29,4 +29,14 @@ public class Harga implements IHarga {
     public double getHargaBeli(double kursRasio) {
         return hargaBeli * kursRasio;
     }
+
+    public String getMataUang(){
+        return this.mataUang;
+    }
+
+    public void debug() {
+        System.out.println("HargaBeli: " + hargaBeli);
+        System.out.println("HargaJual: " + hargaJual);
+        System.out.println("MataUang: " + mataUang);
+    }
 }

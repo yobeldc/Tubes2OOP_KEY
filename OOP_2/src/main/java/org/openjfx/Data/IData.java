@@ -1,7 +1,6 @@
-package org.openjfx.Data;
-import java.util.List;
-import org.openjfx.Data.Data;
+// package org.openjfx.Data;
+// import java.util.List;
 
-public interface IData< ? extends Data> {
-    List<? extends Data> getListOfObjects();
-}
+// public interface IData<T extends Data> {
+//     List<?> getListOfObjects();
+// }

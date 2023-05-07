@@ -5,10 +5,10 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.text.*;
 import javafx.scene.paint.*;
-import javafx.scene.control.cell.*;
+
 import javafx.collections.*;
 
-
+import org.openjfx.Structs.Barang.*;
 
 
 
@@ -86,39 +86,24 @@ public class InventoriPage extends VBox {
         listBox.setMaxWidth(1250);
         listBox.setMaxHeight(400);
         listBox.setAlignment(Pos.CENTER);
-        
-        //========================DATA========================
-         // Create the table and columns
-         TableView<Barang> table = new TableView<>();
-         TableColumn<Barang, String> gambarCol = new TableColumn<>("Gambar");
-         TableColumn<Barang, String> namaBarangCol = new TableColumn<>("Nama Barang");
-         TableColumn<Barang, Integer> stokCol = new TableColumn<>("Stok");
-         TableColumn<Barang, Double> hargaJualCol = new TableColumn<>("Harga Jual");
-         TableColumn<Barang, Double> hargaBeliCol = new TableColumn<>("Harga Beli");
-         TableColumn<Barang, Void> ubahGambarCol = new TableColumn<>("Ubah Gambar");
- 
-         // Set the cell value factories for each column
-         gambarCol.setCellValueFactory(new PropertyValueFactory<>("gambar"));
-         namaBarangCol.setCellValueFactory(new PropertyValueFactory<>("namaBarang"));
-         stokCol.setCellValueFactory(new PropertyValueFactory<>("stok"));
-         hargaJualCol.setCellValueFactory(new PropertyValueFactory<>("hargaJual"));
-         hargaBeliCol.setCellValueFactory(new PropertyValueFactory<>("hargaBeli"));
- 
-         // Add the columns to the table
-         table.getColumns().addAll(gambarCol, namaBarangCol, stokCol, hargaJualCol, hargaBeliCol, ubahGambarCol);
- 
-         // Add the table to the list box
-         listBox.getChildren().add(table);
-        // Add some sample data to the table
-        ObservableList<Barang> data = FXCollections.observableArrayList(
-                new Barang("gambar1.png", "Barang A", 10, 100.0, 50.0),
-                new Barang("gambar2.png", "Barang B", 20, 200.0, 100.0),
-                new Barang("gambar3.png", "Barang C", 30, 300.0, 150.0),
-                new Barang("gambar4.png", "Barang D", 40, 400.0, 200.0),
-                new Barang("gambar5.png", "Barang E", 50, 500.0, 250.0)
-        );
-        table.setItems(data);
 
+       // Create the table and columns
+        TableView<Barang> table = new TableView<>();
+        
+        InventoriPageController.initiateTable(table);
+        // Create an ObservableList to hold the data for the TableView
+        // ObservableList<Barang> data = FXCollections.observableArrayList();
+        // Add the Barang data to the ObservableListnew Barang("heee", "pnom", 10, 30000, 20000)
+        // data.add(new Barang("heee", "pnom", 10, 30000, 20000));
+
+
+        // Set the items of the TableView to the ObservableList
+       
+        // table.setItems(data);
+
+        
+        // Add the table to the list box
+        listBox.getChildren().add(table);
 
        
 
@@ -137,7 +122,7 @@ public class InventoriPage extends VBox {
         addBarangBox.setAlignment(Pos.BOTTOM_RIGHT);
 
         // Create a green button
-        Button addBarang = new Button("Green Button");
+        Button addBarang = new Button("+ Tambah Barang");
         addBarang.setStyle("-fx-background-color: green; -fx-text-fill: white;");
 
         // Add the green button to the addBarangBox
@@ -147,42 +132,6 @@ public class InventoriPage extends VBox {
         StackPane.setMargin(addBarangBox, new Insets(10));
         StackPane.setAlignment(addBarangBox, Pos.BOTTOM_RIGHT);
         getChildren().add(addBarangBox);
-    }
-
-    private static class Barang {
-        private final String gambar;
-        private final String namaBarang;
-        private final int stok;
-        private final double hargaJual;
-        private final double hargaBeli;
-
-        public Barang(String gambar, String namaBarang, int stok, double hargaJual, double hargaBeli) {
-            this.gambar = gambar;
-            this.namaBarang = namaBarang;
-            this.stok = stok;
-            this.hargaJual = hargaJual;
-            this.hargaBeli = hargaBeli;
-        }
-
-        public String getGambar() {
-            return gambar;
-        }
-
-        public String getNamaBarang() {
-            return namaBarang;
-        }
-
-        public int getStok() {
-            return stok;
-        }
-
-        public double getHargaJual() {
-            return hargaJual;
-        }
-
-        public double getHargaBeli() {
-            return hargaBeli;
-        }
     }
 }
 

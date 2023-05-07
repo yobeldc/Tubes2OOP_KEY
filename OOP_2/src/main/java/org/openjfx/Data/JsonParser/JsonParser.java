@@ -8,9 +8,9 @@ import java.nio.file.Paths;
  
 import org.json.simple.*;
 import org.json.simple.parser.*;
-
+import org.openjfx.Data.*;;
 public class JsonParser {
-    
+    private JSONArray theJson;
     // File disimpan pada direktori resources
     public JsonParser(String filename){
         JSONParser jsonParser = new JSONParser();
@@ -21,9 +21,8 @@ public class JsonParser {
             //Read JSON file
             Object obj = jsonParser.parse(reader);
  
-            JSONArray theJson = (JSONArray) obj;
-            System.out.println(theJson);
-             
+            this.theJson = (JSONArray) obj;
+        
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -32,4 +31,10 @@ public class JsonParser {
             e.printStackTrace();
         }
     }
+
+    public JSONArray getheJson(){
+        return this.theJson;
+    }
+
+
 }

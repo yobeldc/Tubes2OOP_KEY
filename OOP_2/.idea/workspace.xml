@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="706758fb-e0e0-450b-9540-debb0bb321f4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Data/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Data/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Data/DataHistory..java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Data/IData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Data/IData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Data/JsonParser/JsonParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Data/JsonParser/JsonParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Pages/Inventori/InventoriPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Pages/Inventori/InventoriPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Pages/Inventori/InventoriPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Pages/Inventori/InventoriPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Structs/Barang/Barang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Structs/Barang/Barang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Structs/Harga/Harga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Structs/Harga/Harga.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683338641873</updated>
-      <workItem from="1683338642901" duration="16378000" />
+      <workItem from="1683338642901" duration="16980000" />
     </task>
     <servers />
   </component>
@@ -82,8 +88,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/openjfx/Data/Data.java</url>
-          <line>9</line>
-          <properties class="org.openjfx.Data.Data" method="main">
+          <line>3</line>
+          <properties class="org.openjfx.Data.Data">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
