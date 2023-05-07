@@ -17,7 +17,9 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
@@ -46,10 +48,12 @@ public class SalesPage extends HBox{
         icon.setFitHeight(28);
         icon.setFitWidth(28);
         hamburgerButton.setGraphic(icon);
+        HBox.setMargin(hamburgerButton, new Insets(0, 20, 0, 0));
         
         Label bill = new Label("On Going Bill " + currentBill);
-        bill.setFont(new Font(16));
-        HBox.setMargin(bill, new Insets(0, 100, 0, 100));
+        bill.setFont(Font.font("Arial", FontWeight.BOLD, 14));
+        bill.setTextFill(Color.WHITE);
+        HBox.setMargin(bill, new Insets(0, 80, 0, 80));
         
         MenuItem billMenuItem = new MenuItem();
         billMenuItem.setText(bill.getText());
@@ -64,6 +68,7 @@ public class SalesPage extends HBox{
         addBtn.setFont( new Font(20));
         addBtn.setPrefWidth(20);
         addBtn.setPrefHeight(20);
+        HBox.setMargin(addBtn, new Insets(0, 0, 0, 20));
         addBtn.setOnAction(event -> {
             // add a new menu item and set its action
             MenuItem newItem = createMenuItem("On Going Bill " + ++currentBill);
@@ -99,14 +104,16 @@ public class SalesPage extends HBox{
         simpan.setMaxWidth(110);
         simpan.setMaxHeight(28);
         simpan.getStyleClass().addAll("boxButton");
-        Text textsimpan = new Text("Simpan");
+        Label save = new Label("Simpan");
+        save.setFont(Font.font("Arial", FontWeight.BOLD, 14));
+        save.setTextFill(Color.WHITE);
+        simpan.getChildren().addAll(save);
         
         simpan.setOnMouseClicked(e -> {
             // TODO
             System.out.println("Simpan");
         });
-
-        simpan.getChildren().add(textsimpan);
+        
         HBox.setMargin(simpan, new Insets(0, 10, 0, 0));
         simpan.setAlignment(Pos.CENTER);
         
@@ -115,14 +122,16 @@ public class SalesPage extends HBox{
         bayar.setMaxWidth(110);
         bayar.setMaxHeight(28);
         bayar.getStyleClass().addAll("boxButton");
-        Text textbayar = new Text("Bayar");
-
+        Label pay = new Label("Bayar");
+        pay.setFont(Font.font("Arial", FontWeight.BOLD, 14));
+        pay.setTextFill(Color.WHITE);
+        bayar.getChildren().addAll(pay);
+        
         bayar.setOnMouseClicked(e -> {
             // TODO
             System.out.println("Bayar");
         });
         
-        bayar.getChildren().add(textbayar);
         HBox.setMargin(bayar, new Insets(0, 0, 0, 10));
         bayar.setAlignment(Pos.CENTER);
         
