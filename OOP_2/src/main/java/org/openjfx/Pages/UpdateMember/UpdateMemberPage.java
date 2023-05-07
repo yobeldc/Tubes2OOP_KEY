@@ -14,6 +14,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.geometry.Pos;
 
@@ -22,9 +23,10 @@ public class UpdateMemberPage extends VBox {
     public UpdateMemberPage() {
         VBox finalBox = new VBox();
         finalBox.getStyleClass().addAll("page3");
-        finalBox.setPrefSize(800, 700);
+        finalBox.setPrefSize(800, 675);
+        finalBox.setStyle("-fx-border-radius: 25; -fx-background-radius: 25;");
         finalBox.setMaxWidth(800);
-        finalBox.setMaxHeight(700);
+        finalBox.setMaxHeight(675);
         finalBox.setAlignment(Pos.CENTER);
 
         VBox UpdateMemberPage = new VBox();
@@ -35,9 +37,10 @@ public class UpdateMemberPage extends VBox {
         // Create a new box
         VBox searchBox = new VBox();
         searchBox.getStyleClass().addAll("box");
-        searchBox.setPrefSize(600, 50);
+        searchBox.setStyle("-fx-border-radius: 15; -fx-background-radius: 15;");
+        searchBox.setPrefSize(600, 75);
         searchBox.setMaxWidth(600);
-        searchBox.setMaxHeight(50);
+        searchBox.setMaxHeight(75);
         VBox.setMargin(searchBox, new Insets(0, 0, 10, 0));
         
         HBox search = new HBox();
@@ -74,18 +77,22 @@ public class UpdateMemberPage extends VBox {
         // Create a new box
         VBox inputBox = new VBox();
         inputBox.getStyleClass().addAll("box");
-        inputBox.setPrefSize(416, 529);
+        inputBox.setStyle("-fx-border-radius: 25; -fx-background-radius: 25;");
+        inputBox.setPrefSize(416, 500);
         inputBox.setMaxWidth(416);
-        inputBox.setMaxHeight(529);
+        inputBox.setMaxHeight(500);
 
         // Add label as a title
-        Label updateLabel = new Label("Perbarui Informasi Member");
+        Label updateLabel = new Label("PERBARUI INFORMASI MEMBER");
+        updateLabel.setStyle("-fx-text-fill: #FFFFFF;");
+        updateLabel.setFont(Font.font("Inter", FontWeight.BOLD, 24));
         VBox.setMargin(updateLabel, new Insets(50, 0, 0, 0));
         inputBox.setAlignment(Pos.TOP_CENTER);
         
         // Add text field for Ubah Nama
         TextField nameField = new TextField();
         nameField.setPromptText("Ubah Nama");
+        nameField.setStyle("-fx-border-radius:10; -fx-background-radius:10;");
         nameField.setPrefSize(335, 45);
         nameField.setMaxWidth(335);
         nameField.setMaxHeight(335);
@@ -94,6 +101,7 @@ public class UpdateMemberPage extends VBox {
         // Add text field for Ubah Nomor Telepon
         TextField telephoneField = new TextField();
         telephoneField.setPromptText("Ubah Nomor Telepon");
+        telephoneField.setStyle("-fx-border-radius:10; -fx-background-radius:10;");
 
         // Add option field for ubah status member
         // Create a combo box for updating member status
@@ -101,6 +109,7 @@ public class UpdateMemberPage extends VBox {
         updateStatus.getItems().addAll("Non-VIP", "VIP");
         updateStatus.setPromptText("Ubah Status Member");
         updateStatus.setEditable(false);
+        updateStatus.setStyle("-fx-border-radius: 10; -fx-background-radius:10; -fx-background-color: #FFFFFF;");
         updateStatus.setPrefSize(335, 45);
         updateStatus.setMaxWidth(335);
         updateStatus.setMaxHeight(335);
@@ -125,6 +134,7 @@ public class UpdateMemberPage extends VBox {
 
         // Add Submit Button
         Button submit = new Button("Submit");
+        submit.setStyle("-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #0B4A83; -fx-text-fill: #FFFFFF; -fx-font-size: 20px; -fx-font-weight: bold");
 
         // TODO
         // update.setOnAction(e -> {

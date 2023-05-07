@@ -25,6 +25,8 @@ public class InventoriPage extends VBox {
         titleBox.setPrefSize(1200, 30);
         titleBox.setMaxWidth(1200);
         titleBox.setMaxHeight(30);
+        titleBox.setStyle("-fx-border-radius: 20;");
+        titleBox.setStyle("-fx-background-radius: 20;");
 
         // Add label as a title
         Label daftarLabel = new Label("INVENTORI");
@@ -42,19 +44,27 @@ public class InventoriPage extends VBox {
         customizeBox.setPrefSize(1200, 75);
         customizeBox.setMaxWidth(1200);
         customizeBox.setMaxHeight(150);
+        customizeBox.setStyle("-fx-border-radius: 20;");
+        customizeBox.setStyle("-fx-background-radius:20;");
 
         // Create a new HBox for the left corner buttons
         HBox leftButtonsBox = new HBox();
         leftButtonsBox.setAlignment(Pos.CENTER_LEFT);
-        leftButtonsBox.setSpacing(10);
+        leftButtonsBox.setSpacing(15);
+        leftButtonsBox.setPadding(new Insets(10, 10, 10, 25));
 
         // Add "Ubah Nomor Telepon" text field to leftButtonsBox
         TextField searchField = new TextField();
         searchField.setPromptText("Cari Barang");
+        searchField.setStyle("-fx-border-radius: 10; -fx-background-radius: 10");
+        searchField.setPrefWidth(200);
+        searchField.setPrefHeight(25);
         leftButtonsBox.getChildren().add(searchField);
 
         // Add "Mode Edit" button to leftButtonsBox
         Button modeEditButton = new Button("Mode Edit");
+        modeEditButton.setPrefHeight(25);
+        modeEditButton.setStyle("-fx-background-color: #FFFFFF; -fx-border-radius: 10; -fx-background-radius: 10");
         leftButtonsBox.getChildren().add(modeEditButton);
 
         // Create a new Region node
@@ -64,14 +74,19 @@ public class InventoriPage extends VBox {
         // Create a new HBox for the right corner buttons
         HBox rightButtonsBox = new HBox();
         rightButtonsBox.setAlignment(Pos.CENTER_RIGHT);
-        rightButtonsBox.setSpacing(10);
+        rightButtonsBox.setSpacing(15);
+        rightButtonsBox.setPadding(new Insets(10, 25, 10, 10));
 
         // Add "Hapus Perubahan" button to rightButtonsBox
         Button hapusButton = new Button("Hapus Perubahan");
+        hapusButton.setStyle("-fx-background-color: #F24D4D; -fx-border-radius: 10; -fx-background-radius: 10; -fx-text-fill: #FFFFFF;");
+        hapusButton.setPrefHeight(25);
         rightButtonsBox.getChildren().add(hapusButton);
 
         // Add "Simpan Perubahan" button to rightButtonsBox
         Button simpanButton = new Button("Simpan Perubahan");
+        simpanButton.setPrefHeight(25);
+        simpanButton.setStyle("-fx-background-color: #84E182; -fx-border-radius: 10; -fx-background-radius: 10; -fx-text-fill: #FFFFFF;");
         rightButtonsBox.getChildren().add(simpanButton);
 
         // Add the leftButtonsBox, spacer, and rightButtonsBox to customizeBox
@@ -117,13 +132,14 @@ public class InventoriPage extends VBox {
         //========================AddBarang========================
         // Create a new VBox for the green button
         VBox addBarangBox = new VBox();
-        addBarangBox.setPadding(new Insets(10));
+        addBarangBox.setPadding(new Insets(20));
         addBarangBox.setSpacing(10);
         addBarangBox.setAlignment(Pos.BOTTOM_RIGHT);
 
         // Create a green button
         Button addBarang = new Button("+ Tambah Barang");
-        addBarang.setStyle("-fx-background-color: green; -fx-text-fill: white;");
+        addBarang.setPrefHeight(35);
+        addBarang.setStyle("-fx-background-color: green; -fx-text-fill: white; -fx-background-radius: 10; -fx-border-radius: 10");
 
         // Add the green button to the addBarangBox
         addBarangBox.getChildren().add(addBarang);

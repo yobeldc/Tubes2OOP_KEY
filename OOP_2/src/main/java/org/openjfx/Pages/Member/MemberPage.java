@@ -6,6 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+
 
 public class MemberPage extends VBox {
 
@@ -17,12 +20,15 @@ public class MemberPage extends VBox {
         // Create a new box
         VBox textBox = new VBox();
         textBox.getStyleClass().addAll("box");
+        textBox.setStyle("-fx-border-radius: 25; -fx-background-radius: 25; -fx-background-color: #7CBAF2;");
         textBox.setPrefSize(416, 529);
         textBox.setMaxWidth(416);
         textBox.setMaxHeight(529);
 
         // Add label as a title
-        Label daftarLabel = new Label("Daftar Member Baru");
+        Label daftarLabel = new Label("DAFTAR MEMBER BARU");
+        daftarLabel.setFont(Font.font("Inter", FontWeight.BOLD, 24));
+        daftarLabel.setStyle("-fx-text-fill: #FFFFFF;");
         VBox.setMargin(daftarLabel, new Insets(50, 0, 0, 0));
         textBox.getChildren().add(daftarLabel);
         textBox.setAlignment(Pos.TOP_CENTER);
@@ -30,6 +36,7 @@ public class MemberPage extends VBox {
         // Add text field for Nama
         TextField nameField = new TextField();
         nameField.setPromptText("Nama");
+        nameField.setStyle("-fx-border-radius: 10; -fx-background-radius: 10; -fx-text-fill: #0B4A83; -fx-font-size: 16px;");
         textBox.getChildren().add(nameField);
         nameField.setPrefSize(335, 45);
         nameField.setMaxWidth(335);
@@ -39,6 +46,8 @@ public class MemberPage extends VBox {
         // Add text field for Nomor Telepon
         TextField telephoneField = new TextField();
         telephoneField.setPromptText("Nomor Telepon");
+        telephoneField.setStyle("-fx-border-radius: 10; -fx-background-radius: 10; -fx-text-fill: #0B4A83; -fx-font-size: 16px;");
+
 
         // Add a listener to the text field to validate user input
         telephoneField.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -56,6 +65,7 @@ public class MemberPage extends VBox {
 
         // Add Daftar Button
         Button daftar = new Button("Daftar");
+        daftar.setStyle("-fx-border-radius: 10; -fx-background-radius: 10; -fx-font-size: 20px; -fx-text-fill: #FFFFFF; -fx-background-color: #0B4A83; -fx-font-weight: bold");
 
         // TODO
         // daftar.setOnAction(e -> {

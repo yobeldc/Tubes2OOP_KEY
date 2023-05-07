@@ -26,17 +26,18 @@ public class HomePage extends HBox {
         // TITLE
         VBox title = new VBox();
         title.getStyleClass().addAll("box");
+        title.setStyle("-fx-border-radius: 25; -fx-background-radius: 25;");
         title.setPrefSize(439, 242);
         title.setMaxWidth(439);
         title.setMaxHeight(242);
         
         Label titleLabel = new Label("BILLIFY");
-        titleLabel.setFont(Font.font("Arial", FontWeight.BOLD, 50));
+        titleLabel.setFont(Font.font("Inter", FontWeight.BOLD, 50));
         titleLabel.setTextFill(Color.WHITE);
         title.getChildren().add(titleLabel);
         
         Label quote = new Label("Make Your Life Easy");
-        quote.setFont(Font.font("Arial", 30));
+        quote.setFont(Font.font("Inter", 30));
         quote.setTextFill(Color.WHITE);
         VBox.setMargin(quote, new Insets(20, 0, 0, 0));
         title.getChildren().add(quote);
@@ -57,21 +58,24 @@ public class HomePage extends HBox {
         createdBy.setMaxHeight(40);
         
         Label created = new Label("created by");
-        created.setFont(Font.font("Arial", 12));
+        created.setFont(Font.font("Inter", 14));
+        created.setStyle("-fx-text-fill: #0B4A83;");
+
         created.setTextFill(Color.BLACK);
         
         // Create a new box
         VBox chumbucket = new VBox();
         HBox.setMargin(chumbucket, new Insets(0, 0, 0, 10));
         chumbucket.getStyleClass().addAll("box");
+        chumbucket.setStyle("-fx-border-radius: 10; -fx-background-radius: 10;");
         chumbucket.setPrefSize(279, 39);
         chumbucket.setMaxWidth(279);
         chumbucket.setMaxHeight(39);
         
         // Add label as a title
         Label groupName = new Label("ChumBucket");
-        groupName.setFont(Font.font("Arial", FontWeight.BOLD, 17));
-        groupName.setTextFill(Color.WHITE);
+        groupName.setFont(Font.font("Inter", FontWeight.BOLD, 17));
+        groupName.setStyle("-fx-text-fill: #FFFFFF;");
         chumbucket.getChildren().add(groupName);
         chumbucket.setAlignment(Pos.CENTER);
         
@@ -82,32 +86,32 @@ public class HomePage extends HBox {
         
         // Nama anggota kelompok
         Label yobel = new Label("13521067 - YOBEL DEAN CHRISTOPHER");
-        yobel.setFont(Font.font("Arial", 14));
-        yobel.setTextFill(Color.BLACK);
+        yobel.setFont(Font.font("Inter", FontWeight.BOLD, 14));
+        yobel.setStyle("-fx-text-fill: #428FD4;");
         group.getChildren().add(yobel);
         VBox.setMargin(yobel, new Insets(15, 0, 0, 0));
         
-        Label hobert = new Label("13521079 - HOBERT ANTHONY JONATHAN");
-        hobert.setFont(Font.font("Arial", 14));
-        hobert.setTextFill(Color.BLACK);
+        Label hobert = new Label("13521079 - HOBERT ANTHONY JONATAN");
+        hobert.setFont(Font.font("Inter", FontWeight.BOLD, 14));
+        hobert.setStyle("-fx-text-fill: #428FD4;");
         group.getChildren().add(hobert);
         VBox.setMargin(hobert, new Insets(15, 0, 0, 0));
         
         Label jerry = new Label("13521131 - JEREMYA DHARMAWAN RAHARJO");
-        jerry.setFont(Font.font("Arial", 14));
-        jerry.setTextFill(Color.BLACK);
+        jerry.setFont(Font.font("Inter", FontWeight.BOLD,14));
+        jerry.setStyle("-fx-text-fill: #428FD4;");
         group.getChildren().add(jerry);
         VBox.setMargin(jerry, new Insets(15, 0, 0, 0));
         
         Label ferin = new Label("13521161 - FERINDYA AULIA BERLIANTI");
-        ferin.setFont(Font.font("Arial", 14));
-        ferin.setTextFill(Color.BLACK);
+        ferin.setFont(Font.font("Inter", FontWeight.BOLD, 14));
+        ferin.setStyle("-fx-text-fill: #428FD4;");
         group.getChildren().add(ferin);
         VBox.setMargin(ferin, new Insets(15, 0, 0, 0));
         
         Label iwan = new Label("13521164 - AKHMAD SETIAWAN");
-        iwan.setFont(Font.font("Arial", 14));
-        iwan.setTextFill(Color.BLACK);
+        iwan.setFont(Font.font("Inter", FontWeight.BOLD, 14));
+        iwan.setStyle("-fx-text-fill: #428FD4;");
         group.getChildren().add(iwan);
         VBox.setMargin(iwan, new Insets(15, 0, 0, 0));
         
@@ -124,18 +128,19 @@ public class HomePage extends HBox {
         
         VBox timeDate = new VBox();
         timeDate.getStyleClass().addAll("box");
+        timeDate.setStyle("-fx-border-radius: 25; -fx-background-radius: 25");
         timeDate.setPrefSize(439, 242);
         timeDate.setMaxWidth(439);
         timeDate.setMaxHeight(242);
         timeDate.setAlignment(Pos.CENTER);
 
         Label dateLabel = new Label();
-        dateLabel.setFont(Font.font("Arial", 38));
+        dateLabel.setFont(Font.font("Inter", 38));
         dateLabel.setTextFill(Color.WHITE);
         timeDate.getChildren().add(dateLabel);
         
         Label timeLabel = new Label();
-        timeLabel.setFont(Font.font("Arial", FontWeight.BOLD, 48));
+        timeLabel.setFont(Font.font("Inter", FontWeight.BOLD, 48));
         timeLabel.setTextFill(Color.WHITE);
         VBox.setMargin(timeLabel, new Insets(20, 0, 0, 0));
         timeDate.getChildren().add(timeLabel);
