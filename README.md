@@ -28,5 +28,6 @@ Dalam aplikasi ini, terdapat beberapa kegunaan utama, antara lain
 2. Java 11 
 
 ## How To Build
-1. 
-2. 
+1. Clone atau download zip repositori ini terlebih dahulu
+2. Jalankan JAR file yang ada di dalam repositori
+3. Compile dan build dengan maven, jalankan `mvn clean javafx:run` pada direktori `OOP_2`
