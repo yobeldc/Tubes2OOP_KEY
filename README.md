@@ -1,6 +1,6 @@
 # Tubes2OOP_KEY
 
-# IF2210 - Tugas Besar 1 : Kompetisi Kartu ala Kerajaan Permen
+# IF2210 - Tugas Besar 2 : Aplikasi P.O.S Billify
 
 Projek ini dibuat untuk memenuhi Tugas Besar Besar 2 IF2210 Pemrograman Berorientasi Objek, yaitu sebuah aplikasi POS (Point of Sales) yang adalah sebuah aplikasi kasir beserta dengan inventori atau gudang untuk mendata penyimpanan barang dan pesanan. Aplikasi ini dibuat dengan memanfaatkan konsep Object Oriented Programming menggunakan bahasa Java dan dilengkapi dengan tampilan GUI. 
 
