@@ -1,0 +1,58 @@
+[
+  {
+    "nama": "Nasi Goreng",
+    "kategori": "Makanan",
+    "harga": {
+      "hargaBeli": 20000.0,
+      "hargaJual": 25000.0,
+      "mataUang": "IDR"
+    },
+    "stok": 10,
+    "gambar": "nasi_goreng.jpg"
+  },
+  {
+    "nama": "Mie Goreng",
+    "kategori": "Makanan",
+    "harga": {
+      "hargaBeli": 15000.0,
+      "hargaJual": 20000.0,
+      "mataUang": "IDR"
+    },
+    "stok": 8,
+    "gambar": "mie_goreng.jpg"
+  },
+  {
+    "nama": "Soto Ayam",
+    "kategori": "Makanan",
+    "harga": {
+      "hargaBeli": 18000.0,
+      "hargaJual": 22000.0,
+      "mataUang": "IDR"
+    },
+    "stok": 15,
+    "gambar": "soto_ayam.jpg"
+  },
+  {
+    "nama": "Bakso",
+    "kategori": "Makanan",
+    "harga": {
+      "hargaBeli": 10000.0,
+      "hargaJual": 15000.0,
+      "mataUang": "IDR"
+    },
+    "stok": 12,
+    "gambar": "bakso.jpg"
+  },
+  {
+    "nama": "Ayam Goreng",
+    "kategori": "Makanan",
+    "harga": {
+      "hargaBeli": 25000.0,
+      "hargaJual": 30000.0,
+      "mataUang": "IDR"
+    },
+    "stok": 5,
+    "gambar": "ayam_goreng.jpg"
+  }
+]
+

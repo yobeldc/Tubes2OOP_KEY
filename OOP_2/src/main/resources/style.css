@@ -7,3 +7,66 @@
     -fx-font-weight: bold;
     -fx-alignment: bottom-left;
 }
+
+.page {
+    -fx-background-color: #DAF3FF;
+}
+
+.page2 {
+    -fx-background-color: #428FD4;
+}
+
+.page3 {
+    -fx-background-color: #7CBAF2;
+}
+
+.box {
+    -fx-background-color: #206EB4;
+}
+
+.box2 {
+    -fx-background-color: #428FD4;
+}
+
+
+.white {
+    -fx-background-color: #FFFFFF;
+}
+
+.hamburger {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.hamburger:hover {
+    -fx-background-color: #7CBAF2;
+}
+
+.content-box{
+    -fx-background-color:white;
+}
+
+.boxButton {
+    -fx-background-color: #206EB4;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 16px;
+}
+
+.boxButton:hover {
+    -fx-background-color: #7CBAF2;
+}
+
+.settingsTitle {
+    -fx-background-color: #428FD4;
+    -fx-background-radius: 10;
+    -fx-font-family: Dialog;
+    -fx-font-size: 23;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.settingsContainer {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 0);
+}

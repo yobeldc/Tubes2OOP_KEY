@@ -1,91 +1,62 @@
 package org.openjfx;
 
+import org.openjfx.Bar.Sidebar;
+import org.openjfx.Pages.Home.HomePageController;
+
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 import javafx.geometry.Pos;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Screen;
+import javafx.stage.Stage;
+
+import org.openjfx.Pages.Home.*;
+import org.openjfx.Bar.*;
+import org.openjfx.Data.*;
+import org.openjfx.Structs.Barang.*;
+import org.openjfx.Data.JsonParser.*;
+
 
 public class App extends Application {
 
-    private BorderPane root;
+    private static BorderPane root;
 
     @Override
     public void start(Stage primaryStage) {
         // create root layout
         root = new BorderPane();
+        root.setStyle("-fx-background-color: #206EB4;");
+
+        // Create the header
+        // Header header = new Header();
+        // root.setTop(header);
         
         // create menu bar
-        VBox menuBar = new VBox();
-        menuBar.setPadding(new Insets(10));
-        menuBar.setSpacing(5);
+        Sidebar sideBar = new Sidebar();
+        root.setTop(sideBar);
 
-        Button homeBtn = new Button("Home");
-        homeBtn.setOnAction(e -> showHomePage());
+        // show initial homepage
+        HomePageController.showHomePage();
 
-        Button page1Btn = new Button("Page 1");
-        page1Btn.setOnAction(e -> showPage1());
-        page1Btn.getStyleClass().addAll("bottom-left-button", "button");
-
-        // set button position to bottom left
-        VBox.setMargin(page1Btn, new Insets(0,0,0,0));
-        menuBar.getChildren().addAll(homeBtn, page1Btn);
-        VBox.setMargin(menuBar, new Insets(0,0,0,0));
-
-        root.setLeft(menuBar);
-
-        // create home page
-        Label homeLabel = new Label("Welcome to the home page!");
-        VBox homePane = new VBox(homeLabel);
-        homePane.setPadding(new Insets(10));
-        homePane.setSpacing(5);
-
-        root.setCenter(homePane);
-
-        // create page 1
-        Label page1Label = new Label("This is page 1!");
-        VBox page1Pane = new VBox(page1Label);
-        page1Pane.setPadding(new Insets(10));
-        page1Pane.setSpacing(5);
-
-        // create scene
-        Scene scene = new Scene(root, 800, 600);
+        // create scene      
+        Scene scene = new Scene(root, 1300, 750);
         scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
 
         primaryStage.setTitle("My App");
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
-        
-        // set alignment of menuBar to bottom left
-        menuBar.setAlignment(Pos.BOTTOM_LEFT);
     }
 
-    private void showHomePage() {
-        Label homeLabel = new Label("Welcome to the home page!");
-        VBox homePane = new VBox(homeLabel);
-        homePane.setPadding(new Insets(10));
-        homePane.setSpacing(5);
-
-        root.setCenter(homePane);
+    public static BorderPane getRoot() {
+        return root;
     }
 
-    private void showPage1() {
-        Label page1Label = new Label("This is page 1!");
-        VBox page1Pane = new VBox(page1Label);
-        page1Pane.setPadding(new Insets(10));
-        page1Pane.setSpacing(5);
-
-        root.setCenter(page1Pane);
-    }
-
-    
     public static void main(String[] args) {
+        // Data data = new Data("test.json");
+        
+    
         launch();
     }
-
 }
